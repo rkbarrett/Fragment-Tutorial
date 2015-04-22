@@ -3,6 +3,7 @@ package com.msi.fragmentsession;
 /**
  * Created by Kent on 4/21/2015.
  */
+// <MAC> - Create class to contain all user information
 public class UserInfo {
     private String mName;
     private String mAddress;

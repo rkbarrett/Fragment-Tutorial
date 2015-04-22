@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity
-    // <AC> Implement UserListFragmentListener
+    // <MAC> Implement UserListFragmentListener
     implements UserListFragment.UserListFragmentListener {
 
     @Override
