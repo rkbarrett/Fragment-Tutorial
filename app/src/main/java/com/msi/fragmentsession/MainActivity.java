@@ -3,9 +3,11 @@ package com.msi.fragmentsession;
 import android.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity
     // <MAC> Implement UserListFragmentListener
@@ -15,6 +17,8 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.v("SOME_TAG_BY_W21114", "onCreate()");
 
         // <MAC> - Instantiate the UserListFragment
         UserListFragment userListFragment = new UserListFragment();
@@ -45,6 +49,8 @@ public class MainActivity extends ActionBarActivity
             return true;
         }
 
+        Log.v("SOME_TAG_BY_W21114", "onOptionsItemSelected()");
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -59,5 +65,14 @@ public class MainActivity extends ActionBarActivity
         4. Launch another Fragment. Get some data from the User (hint EditText with a Button).
         Pass that data back to the Activity and have the Activity pass it to the other Fragment.
          */
+        Log.v("SOME_TAG_BY_W21114", "onUserSelected()");
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(),"Bye Bye...", Toast.LENGTH_SHORT).show();
+        Log.v("SOME_TAG_BY_W21114", "onDestroy()");
     }
 }
