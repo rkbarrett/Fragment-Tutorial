@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity
     // <MAC> Implement UserListFragmentListener
@@ -49,6 +50,14 @@ public class MainActivity extends ActionBarActivity
 
     // <MAC> - Realize the interface method from UserListFragmentListener
     public void onUserSelected(UserInfo userInfo) {
-
+        /* <MAC-HW> Do something interesting here. Suggestions (easiest to hardest):
+        1. Make a Toast!
+        2. Create a public method in the UserListFragment to pass back data. You will need to
+        assign your UserListFragment instance to a class scoped attribute so you can get to it.
+        3. Launch another Fragment (hint use FragmentManager and "replace" instead of "add" your
+        new Fragment)! Do something interesting in that Fragment.
+        4. Launch another Fragment. Get some data from the User (hint EditText with a Button).
+        Pass that data back to the Activity and have the Activity pass it to the other Fragment.
+         */
     }
 }

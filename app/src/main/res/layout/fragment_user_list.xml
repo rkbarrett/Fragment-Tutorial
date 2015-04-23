@@ -4,10 +4,11 @@
              android:layout_height="match_parent"
              tools:context="com.msi.fragmentsession.UserListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment"/>
+
+    <!-- <MAC-HW> Add a button here - don't forget to make it findable from your fragment -->
 
 </FrameLayout>

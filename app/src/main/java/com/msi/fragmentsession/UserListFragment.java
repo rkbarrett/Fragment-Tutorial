@@ -33,8 +33,15 @@ public class UserListFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_user_list, container, false);
     }
 
+    /* <MAC-HW> Overload onViewCreated() here
+        1. Retrieve the Button created in the layout XML file here.
+        2. Give the button a listener (use - setOnClickListener())
+        3. Have the action for this button invoke the callback to the activity
+    */
+
+
+
     /* <MAC> - Comment out this method it is not needed
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
