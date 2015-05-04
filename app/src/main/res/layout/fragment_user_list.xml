@@ -1,14 +1,20 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="com.msi.fragmentsession.UserListFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click this button!!!!!"/>
 
     <!-- <MAC-HW> Add a button here - don't forget to make it findable from your fragment -->
 
-</FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Apx8000Button"
+        android:text="APX8000"
+        android:onClick="apx8000ButtonClick"/>
+</LinearLayout>

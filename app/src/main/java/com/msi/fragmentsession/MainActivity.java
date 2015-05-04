@@ -1,11 +1,13 @@
 package com.msi.fragmentsession;
 
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -28,6 +30,37 @@ public class MainActivity extends ActionBarActivity
         fragmentManager.beginTransaction()
                 .add(R.id.mainContainer, userListFragment)
                 .commit();
+
+        /*
+        Button bApx8000 = (Button)findViewById(R.id.Apx8000Button);
+        bApx8000.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Button Pressed...", Toast.LENGTH_SHORT).show();
+            }
+        });*/
+    }
+    public void backButtonClick(View v)
+    {
+        Toast.makeText(getApplicationContext(),"Back Button Pressed...", Toast.LENGTH_SHORT).show();
+
+        UserListFragment userListFragment = new UserListFragment();
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.mainContainer, userListFragment , "fragment_screen");
+        ft.commit();
+    }
+
+    public void apx8000ButtonClick(View v)
+    {
+        Toast.makeText(getApplicationContext(),"Button Pressed...", Toast.LENGTH_SHORT).show();
+
+        BlankFragment newFrag = new BlankFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.mainContainer, newFrag , "fragment_screen");
+        ft.commit();
     }
 
     @Override
